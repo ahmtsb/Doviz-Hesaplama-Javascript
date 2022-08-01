@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kur hesapla</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-12 col-md-8 "> <! kolon yapısı ayarlandı >
+        <div class="currency">
+          <select id="currency-one"> <! üstteki kutucuğun içinde gösterilecek olan para birimleri >
+            <option value="TRY">Türk Lirası</option>
+            <option value="USD" selected>ABD DOLARI</option> <! sayfa açıldığında default olarak seçili gelecek değer >
+            <option value="AUD">AVUSTRALYA DOLARI</option>
+            <option value="DKK">DANİMARKA KRONU</option>
+            <option value="EUR">EURO</option>
+            <option value="GBP">İNGİLİZ STERLİNİ</option>
+            <option value="CHF">İSVİÇRE FRANGI</option>
+            <option value="SEK">İSVEÇ KRONU</option>
+            <option value="CAD">KANADA DOLARI</option>
+            <option value="KWD">KUVEYT DİNARI</option>
+            <option value="NOK">NORVEÇ KRONU</option>
+            <option value="SAR">SUUDİ ARABİSTAN RİYALİ</option>
+            <option value="JPY">JAPON YENİ</option>
+            <option value="BGN">BULGAR LEVASI</option>
+            <option value="RON">RUMEN LEYİ</option>
+            <option value="RUB">RUS RUBLESİ</option>
+            <option value="IRR">İRAN RİYALİ</option>
+            <option value="CNY">ÇİN YUANI</option>
+            <option value="PKR">PAKİSTAN RUPİSİ</option>
+            <option value="QAR">KATAR RİYALİ</option>
+            <option value="KRW">GÜNEY KORE WONU</option>
+            <option value="AZN">AZERBAYCAN YENİ MANATI</option>
+            <option value="AED">BİRLEŞİK ARAP EMİRLİKLERİ DİRHEMİ</option>
+          </select>
+
+            
+          
+          <input type="number" class="form-control bg-white" id="amount-one" placeholder="0" value="1"> <! hesaplaması yapılacak olan para biriminin sayısal değeri için input ayarlandı >
+        </div>
+    
+        <div class="currency">
+          <select id="currency-two"> <! alttaki kutucuğun içinde gösterilecek olan para birimleri >
+          <option value="TRY" selected>Türk Lirası</option> <! sayfa açıldığında default olarak seçili gelecek değer >
+          <option value="USD">ABD DOLARI</option>
+          <option value="AUD">AVUSTRALYA DOLARI</option>
+          <option value="DKK">DANİMARKA KRONU</option>
+          <option value="EUR">EURO</option>
+          <option value="GBP">İNGİLİZ STERLİNİ</option>
+          <option value="CHF">İSVİÇRE FRANGI</option>
+          <option value="SEK">İSVEÇ KRONU</option>
+          <option value="CAD">KANADA DOLARI</option>
+          <option value="KWD">KUVEYT DİNARI</option>
+          <option value="NOK">NORVEÇ KRONU</option>
+          <option value="SAR">SUUDİ ARABİSTAN RİYALİ</option>
+          <option value="JPY">JAPON YENİ</option>
+          <option value="BGN">BULGAR LEVASI</option>
+          <option value="RON">RUMEN LEYİ</option>
+          <option value="RUB">RUS RUBLESİ</option>
+          <option value="IRR">İRAN RİYALİ</option>
+          <option value="CNY">ÇİN YUANI</option>
+          <option value="PKR">PAKİSTAN RUPİSİ</option>
+          <option value="QAR">KATAR RİYALİ</option>
+          <option value="KRW">GÜNEY KORE WONU</option>
+          <option value="AZN">AZERBAYCAN YENİ MANATI</option>
+          <option value="AED">BİRLEŞİK ARAP EMİRLİKLERİ DİRHEMİ</option>
+          </select>
+          <input type="number" class="form-control bg-white" id="amount-two" placeholder="0" readonly> <! şimdilik sadece üst kutucuğa input yapılıyor >
+        </div>
+
+      </div>
+
+      <div class="col-6 col-md-4">
+        <div class="row">
+          <table id="d-all">
+            <tr>
+              <th style="font-size: 30px;" id="d-cins">Döviz Cinsleri</th>
+              <th style="font-size: 30px;" id="d-kur">Kur Değerleri</th>
+            </tr>
+          </table>
+        </div>
+      </div> 
+
+
+    </div>    
+
+    <script src="script.js"></script>
+  </body>
+</html>
